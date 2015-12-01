@@ -4,7 +4,7 @@ set -e
 function setConfiguration() {
   KEY=$1
   VALUE=$2
-  sed -i "s/^$KEY = .*$/$KEY = $VALUE/g" /etc/graphite/local_settings.py
+  sed -i "s/^#$KEY = .*$/$KEY = $VALUE/g" /etc/graphite/local_settings.py
 }
 
 if [ -n "${CLUSTER_SERVERS+1}" ]; then
