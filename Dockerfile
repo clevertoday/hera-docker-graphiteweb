@@ -19,7 +19,7 @@ RUN 		rm -f /etc/apache2/sites-enabled/000-default.conf && \
 
 COPY        docker-entrypoint.sh /
 
-VOLUME      /var/lib/graphite/whisper
+VOLUME      /var/lib/graphite
 EXPOSE      80
 
 ENTRYPOINT  ["/docker-entrypoint.sh"]
